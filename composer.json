@@ -1,0 +1,15 @@
+{
+  "name": "rossi/sistemats-microservice",
+  "description": "Microservizio PHP per invio spese sanitarie al Sistema Tessera Sanitaria (WS asincrono).",
+  "type": "project",
+  "require": {
+    "php": ">=8.1",
+    "ext-soap": "*",
+    "ext-zip": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "SistemaTS\\": "src/"
+    }
+  }
+}
