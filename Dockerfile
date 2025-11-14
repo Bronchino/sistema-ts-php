@@ -2,6 +2,7 @@ FROM php:8.2-cli
 
 RUN apt-get update && apt-get install -y \
     zip unzip ca-certificates \
+    libxml2-dev pkg-config \
     && docker-php-ext-install soap
 
 WORKDIR /app
