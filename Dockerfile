@@ -14,6 +14,8 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 
 RUN composer install --no-dev --optimize-autoloader
 
+# Render si aspetta un servizio HTTP: esponiamo 8080
 EXPOSE 8080
 
+# Server PHP built-in che serve la cartella public/
 CMD ["php", "-S", "0.0.0.0:8080", "-t", "public"]
